@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 rm -rf target/release
 mkdir target/release
 cd target/release
