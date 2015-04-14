@@ -2,7 +2,7 @@ import com.burtbeckwith.grails.plugins.appinfo.ContextListener
 
 class AppInfoGrailsPlugin {
 
-	String version = '1.1.5-SNAPSHOT'
+	String version = '1.1.5'
 	String grailsVersion = '2.0 > *'
 	List pluginExcludes = [
 		'scripts/CreateAppInfoTestApps.groovy'
