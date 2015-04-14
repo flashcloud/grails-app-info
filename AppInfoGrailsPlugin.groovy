@@ -2,7 +2,7 @@ import com.burtbeckwith.grails.plugins.appinfo.ContextListener
 
 class AppInfoGrailsPlugin {
 
-	String version = '1.1.2'
+	String version = '1.1.3'
 	String grailsVersion = '2.0 > *'
 	List pluginExcludes = [
 		'scripts/CreateAppInfoTestApps.groovy'
@@ -16,7 +16,7 @@ class AppInfoGrailsPlugin {
 
 	String license = 'APACHE'
 	def issueManagement = [system: 'JIRA', url: 'http://jira.grails.org/browse/GPAPPINFO']
-	def scm = [url: 'https://github.com/burtbeckwith/grails-app-info']
+	def scm = [url: 'https://github.com/ceekayel/grails-app-info']
 
 	def doWithWebDescriptor = { xml ->
 		def useContextListener = application.config.grails.plugins.appinfo.useContextListener
