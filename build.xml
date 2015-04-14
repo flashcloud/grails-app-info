@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.cm</groupId>
 	<artifactId>app-info</artifactId>
-	<version>1.1.5</version>
+	<version>1.1.6-SNAPSHOT</version>
 
 	<packaging>pom</packaging>
 	<parent>
@@ -38,6 +38,55 @@
 		<url>https://github.com/ceekayel/grails-app-info</url>
 	</scm>
 
+	<properties>
+		<grails.version>2.3.4</grails.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.grails.plugins</groupId>
+			<artifactId>dynamic-controller</artifactId>
+			<version>0.5.1</version>
+			<type>zip</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.grails.plugins</groupId>
+			<artifactId>google-visualization</artifactId>
+			<version>1.0.1</version>
+			<type>zip</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.grails.plugins</groupId>
+			<artifactId>jquery</artifactId>
+			<version>1.11.1</version>
+			<type>zip</type>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+	<repositories>
+		<repository>
+			<id>grails</id>
+			<name>grails</name>
+			<url>http://repo.grails.org/grails/core</url>
+		</repository>
+		<repository>
+			<id>grails-plugins</id>
+			<name>grails-plugins</name>
+			<url>http://repo.grails.org/grails/plugins</url>
+		</repository>
+		<repository>
+			<id>criticalmass-sonatype-nexus-snapshots</id>
+			<name>Critical Mass Sonatype-Nexus Snapshots</name>
+			<url>http://sonatype.criticalmass.com/nexus/content/repositories/snapshots/</url>
+		</repository>
+		<repository>
+			<id>criticalmass-sonatype-nexus-releases</id>
+			<name>Critical Mass Sonatype-Nexus Releases</name>
+			<url>http://sonatype.criticalmass.com/nexus/content/repositories/releases/</url>
+		</repository>
+	</repositories>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -59,8 +108,8 @@
 						</configuration>
 					</execution>
 					<!--
-						please don't skip test phase to be sure all dependencies downloaded.
-					-->
+                        please don't skip test phase to be sure all dependencies downloaded.
+                    -->
 					<execution>
 						<id>exec-test</id>
 						<phase>test</phase>
@@ -139,16 +188,4 @@
 		</profile>
 	</profiles>
 
-	<repositories>
-		<repository>
-			<id>criticalmass-sonatype-nexus-snapshots</id>
-			<name>Critical Mass Sonatype-Nexus Snapshots</name>
-			<url>http://sonatype.criticalmass.com/nexus/content/repositories/snapshots/</url>
-		</repository>
-		<repository>
-			<id>criticalmass-sonatype-nexus-releases</id>
-			<name>Critical Mass Sonatype-Nexus Releases</name>
-			<url>http://sonatype.criticalmass.com/nexus/content/repositories/releases/</url>
-		</repository>
-	</repositories>
 </project>

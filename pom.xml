@@ -1,16 +1,15 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version='1.0' encoding='UTF-8'?>
+<project xmlns='http://maven.apache.org/POM/4.0.0' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd'>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.cm</groupId>
+    <groupId>org.grails.plugins</groupId>
     <artifactId>app-info</artifactId>
-    <version>1.1.5</version>
+    <packaging>zip</packaging>
+    <version>1.1.6-SNAPSHOT</version>
     <parent>
         <groupId>com.nna</groupId>
         <artifactId>parent</artifactId>
         <version>1.20-SNAPSHOT</version>
     </parent>
-
-    <packaging>zip</packaging>
     <name>Application Info</name>
     <description>UI for inspecting various aspects of the application's configuration</description>
     <url>http://grails.org/plugin/app-info</url>
@@ -25,10 +24,6 @@
             <name>Burt Beckwith</name>
             <email>burt@burtbeckwith.com</email>
         </developer>
-        <developer>
-            <name>Christopher Legan</name>
-            <email>christopherl@criticalmass.com</email>
-        </developer>
     </developers>
     <issueManagement>
         <system>JIRA</system>
@@ -37,6 +32,39 @@
     <scm>
         <url>https://github.com/ceekayel/grails-app-info</url>
     </scm>
-
-
+    <dependencies>
+        <dependency>
+            <groupId>org.grails.plugins</groupId>
+            <artifactId>dynamic-controller</artifactId>
+            <version>0.5.1</version>
+            <type>zip</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.grails.plugins</groupId>
+            <artifactId>google-visualization</artifactId>
+            <version>1.0.1</version>
+            <type>zip</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.grails.plugins</groupId>
+            <artifactId>jquery</artifactId>
+            <version>1.11.1</version>
+            <type>zip</type>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>grails</id>
+            <name>grails</name>
+            <url>http://repo.grails.org/grails/core</url>
+        </repository>
+        <repository>
+            <id>grails-plugins</id>
+            <name>grails-plugins</name>
+            <url>http://repo.grails.org/grails/plugins</url>
+        </repository>
+    </repositories>
 </project>
