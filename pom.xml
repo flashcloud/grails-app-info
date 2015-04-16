@@ -4,7 +4,7 @@
     <groupId>org.grails.plugins</groupId>
     <artifactId>app-info</artifactId>
     <packaging>zip</packaging>
-    <version>1.1.6-SNAPSHOT</version>
+    <version>1.1.6</version>
     <parent>
         <groupId>com.nna</groupId>
         <artifactId>parent</artifactId>
