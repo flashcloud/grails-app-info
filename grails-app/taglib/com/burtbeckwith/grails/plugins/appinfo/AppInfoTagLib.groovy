@@ -20,20 +20,20 @@ class AppInfoTagLib {
 			              'tabs', 'tabs-accordion', 'appinfo']) {
 				out << """<link rel="stylesheet" media="screen" href="${resource(dir:'css',file:"${name}.css",plugin:'appInfo')}"/>"""
 			}
-			for (name in ['jquery.dataTables.min', 'jquery.dataTables_themeroller']) {
-				out << """<link rel="stylesheet" media="screen" href="${resource(dir:'DataTables-1.10.6/media/css',file:"${name}.css",plugin:'appInfo')}"/>"""
+			for (name in ['media/css/jquery.dataTables.min', '/media/css/jquery.dataTables_themeroller']) {
+				out << """<link rel="stylesheet" media="screen" href="${resource(dir:'DataTables-1.10.6',file:"${name}.css",plugin:'appInfo')}"/>"""
 			}
-			for (name in ['dataTables.tableTools.min']) {
-				out << """<link rel="stylesheet" media="screen" href="${resource(dir:'DataTables-1.10.6/extensions/TableTools/css',file:"${name}.css",plugin:'appInfo')}"/>"""
+			for (name in ['extensions/TableTools/css/dataTables.tableTools.min']) {
+				out << """<link rel="stylesheet" media="screen" href="${resource(dir:'DataTables-1.10.6',file:"${name}.css",plugin:'appInfo')}"/>"""
 			}
 			for (name in ['appInfo.dataTable']) {
-				out << g.javascript(src: '' + name + '.js', plugin: 'appInfo')
+				out << "<script type='text/javascript' src='${resource(dir: 'js', file: name + '.js', plugin: 'appInfo')}'></script>"
 			}
-			for (name in ['jquery.dataTables.min']) {
-				out << g.javascript(src: '../DataTables-1.10.6/media/js/' + name + '.js', plugin: 'appInfo')
+			for (name in ['media/js/jquery.dataTables.min']) {
+				out << "<script type='text/javascript' src='${resource(dir: 'DataTables-1.10.6', file: name + '.js', plugin: 'appInfo')}'></script>"
 			}
-			for (name in ['dataTables.tableTools.min']) {
-				out << g.javascript(src: '../DataTables-1.10.6/extensions/TableTools/js/' + name + '.js', plugin: 'appInfo')
+			for (name in ['extensions/TableTools/js/dataTables.tableTools.min']) {
+				out << "<script type='text/javascript' src='${resource(dir: 'DataTables-1.10.6', file: name + '.js', plugin: 'appInfo')}'></script>"
 			}
 		}
 	}
@@ -43,9 +43,9 @@ class AppInfoTagLib {
 			out << r.layoutResources()
 		}
 		else {
-			for (name in ['jquery.dimensions', 'jquery.jdMenu', 'jquery.bgiframe',
-			              'jquery.positionBy', 'jquery.tabs.min']) {
-				out << g.javascript(src: 'jquery/' + name + '.js', plugin: 'appInfo')
+			for (name in ['jquery/jquery.dimensions', 'jquery/jquery.jdMenu', 'jquery/jquery.bgiframe',
+			              'jquery/jquery.positionBy', 'jquery/jquery.tabs.min']) {
+				out << "<script type='text/javascript' src='${resource(dir: 'js', file: name + '.js', plugin: 'appInfo')}'></script>"
 			}
 		}
 	}

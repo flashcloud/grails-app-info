@@ -1,14 +1,13 @@
 <head>
 <meta name='layout' content='appinfo' />
 <title>Loggers</title>
-
-<g:javascript library="jquery" plugin="jquery" />
+	<script type='text/javascript' src='${resource(dir: 'DataTables-1.10.6', file: 'media/js/jquery.js', plugin: 'appInfo')}'/>
 <g:javascript>
 $(document).ready(function() {
 <%
 for (name in ['spring', 'hibernate', 'codec', 'controller', 'controllerMixin',
               'domain', 'filters', 'service', 'taglib', 'grails', 'groovy', 'misc']) {
-	out << "\t\$('#$name').dataTable( { 'bAutoWidth': false } );\n"
+	out << raw("\t\$('#$name').dataTable( { 'bAutoWidth': false } );\n")
 }
 %>
    $("#accordion").tabs("#accordion div.pane", {tabs: 'h2', effect: 'default', initialIndex: null});
